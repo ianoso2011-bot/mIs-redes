@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100b0d">
+
+<title>ROJI | Social Media</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    overflow-x: hidden;
+    background: #09090b;
+}
+
+/* FONDO ANIME */
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+
+    background-image: url("./fondo-anime.jpg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    animation: animeMove 25s ease-in-out infinite alternate;
+}
+.background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(5,5,8,.88),
+        rgba(40,0,10,.78),
+        rgba(5,5,8,.90)
+    );
+}
+
+@keyframes animeMove {
+    from { transform: scale(1); }
+    to { transform: scale(1.12); }
+}
+
+/* TARJETA PRINCIPAL */
+.container {
+    width: 100%;
+    max-width: 440px;
+    padding: 35px 25px;
+    text-align: center;
+
+    background: rgba(15,12,15,.88);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid #a91e36;
+    border-radius: 24px;
+
+    box-shadow: 0 0 40px #ff173333;
+
+    animation: appear .8s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FOTO */
+.avatar {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ff304d;
+    box-shadow: 0 0 25px #ff304d88;
+    margin-bottom: 18px;
+}
+
+/* TITULO */
+.status {
+    color: #ff526a;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 46px;
+    letter-spacing: 6px;
+    text-shadow: 0 0 20px #ff304d;
+}
+
+.description {
+    color: #d0c5c8;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 15px 0 25px;
+}
+
+/* BOTONES */
+.social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    width: 100%;
+    padding: 15px 18px;
+    margin: 13px 0;
+
+    border: 1px solid #59242f;
+    border-radius: 13px;
+
+    background: linear-gradient(
+        110deg,
+        #28171d,
+        #171317
+    );
+
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+.social:hover {
+    transform: translateY(-4px);
+    background: #a91e36;
+    border-color: #ff526a;
+    box-shadow: 0 5px 22px #ff304d55;
+}
+
+.social svg {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    fill: currentColor;
+}
+
+.social span {
+    flex: 1;
+    text-align: left;
+}
+
+.arrow {
+    font-size: 18px;
+    color: #ff657a;
+}
+
+.social:hover .arrow {
+    color: white;
+}
+
+/* MENSAJE FINAL */
+.follow {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #30151e;
+    border: 1px solid #77283a;
+    color: #ff9ba9;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+footer {
+    margin-top: 25px;
+    color: #888;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 380px) {
+    .container {
+        padding: 25px 17px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<main class="container">
+
+    <div class="status">● WELCOME TO MY PROFILE</div>
+
+   <!-- FOTO DE PERFIL ROJI -->
+<img src="./foto.jpg.jpeg"
+     alt="Foto de perfil de ROJI"
+     class="avatar">
+    <h1>ROJI</h1>
+
+    <p class="description">
+        🚀 ¡Bienvenido a mi espacio!
+        Sígueme en todas mis redes sociales
+        para estar al tanto de mis nuevas
+        publicaciones, videos y novedades.
+        ¡No te pierdas nada! ❤️‍🔥
+    </p>
+
+ 
+<!-- INSTAGRAM -->
+<a class="social"
+   href="https://www.instagram.com/roji_llx/"
+   target="_blank"
+   rel="noopener noreferrer">
+   <svg viewBox="0 0 24 24">
+      <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/>
+   </svg>
+   <span>INSTAGRAM</span>
+   <b class="arrow">↗</b>
+</a>
+
+<!-- TIKTOK -->
+<a class="social"
+   href="https://www.tiktok.com/@jjx.roji"
+   target="_blank"
+   rel="noopener noreferrer">
+   <svg viewBox="0 0 24 24">
+      <path d="M19.6 7.1a6.8 6.8 0 0 1-4.1-1.4v8.1a6.1 6.1 0 1 1-6.1-6.1c.4 0 .8 0 1.2.1v3.4a2.8 2.8 0 1 0 1.5 2.5V2h3.4c.3 2.1 1.9 3.8 4.1 4.1v1z"/>
+   </svg>
+   <span>TIKTOK</span>
+   <b class="arrow">↗</b>
+</a>
+
+<!-- YOUTUBE -->
+<a class="social"
+   href="https://www.youtube.com/@Roji_llx"
+   target="_blank"
+   rel="noopener noreferrer">
+   <svg viewBox="0 0 24 24">
+      <path d="M23 7a3 3 0 0 0-2-2.2C19.2 4.3 12 4.3 12 4.3s-7.2 0-9 .5A3 3 0 0 0 1 7C.5 8.8.5 12 .5 12s0 3.2.5 5a3 3 0 0 0 2 2.2c1.8.5 9 .5 9 .5s7.2 0 9-.5a3 3 0 0 0 2-2.2c.5-1.8.5-5 .5-5s0-3.2-.5-5zM9.5 15.5v-7l6 3.5z"/>
+   </svg>
+   <span>YOUTUBE</span>
+   <b class="arrow">↗</b>
+</a>
+
+<!-- TWITCH -->
+<a class="social"
+   href="https://www.twitch.tv/roji_llx"
+   target="_blank"
+   rel="noopener noreferrer">
+   <svg viewBox="0 0 24 24">
+      <path d="M4 2h18v13l-5 5h-4l-3 3H6v-3H2V5l2-3zm2 3v12h4v3l3-3h4l3-3V5H6zm5 2h2v6h-2V7zm5 0h2v6h-2V7z"/>
+   </svg>
+   <span>TWITCH</span>
+   <b class="arrow">↗</b>
+</a>
+
+    <div class="follow">
+        ❤️‍🔥 ¡Gracias por visitar mi perfil!
+        Sígueme y activa las notificaciones
+        para no perderte lo nuevo.
+    </div>
+
+    <footer>
+        © 2026 ROJI · ALL RIGHTS RESERVED
+    </footer>
+
+</main>
+
+</body>
+</html>
